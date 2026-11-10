@@ -1,0 +1,217 @@
+<!-- ==========================================
+     FAIL: app/src/main/res/layout/overlay_starman.xml
+     ========================================== -->
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#E6080C18"
+    android:padding="10dp">
+
+    <!-- EXPANDED MODE -->
+    <LinearLayout
+        android:id="@+id/layoutExpanded"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Drag Bar -->
+        <LinearLayout
+            android:id="@+id/overlayHeaderBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="6dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="STARMAN MLBB"
+                android:textColor="#00F0FF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnOverlayMinimize"
+                android:layout_width="48dp"
+                android:layout_height="32dp"
+                android:text="MIN"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btnOverlayClose"
+                android:layout_width="42dp"
+                android:layout_height="32dp"
+                android:text="X"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnToggleAnalysis"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:backgroundTint="#00F0FF"
+            android:text="[START LIVE ANALYSIS]"
+            android:textColor="#05070E"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <!-- Match Status -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="MATCH STATUS"
+            android:textColor="#00F0FF"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvGamePhase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game Phase: UNKNOWN"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tvTeamAdvantage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team Advantage: UNKNOWN"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tvThreatLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Threat Level: UNKNOWN"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp" />
+
+        <!-- Tactical Command Buttons -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="TACTICAL COMMAND"
+            android:textColor="#A78BFA"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btnCmdAttack" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="ATK" android:textSize="9sp" />
+            <Button android:id="@+id/btnCmdRotate" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="ROT" android:textSize="9sp" />
+            <Button android:id="@+id/btnCmdDefend" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="DEF" android:textSize="9sp" />
+            <Button android:id="@+id/btnCmdRetreat" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="RET" android:textSize="9sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btnCmdObjective" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="OBJECTIVE" android:textSize="9sp" />
+            <Button android:id="@+id/btnCmdFarm" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="FARM" android:textSize="9sp" />
+            <Button android:id="@+id/btnCmdWait" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="WAIT" android:textSize="9sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTacticalSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="WAIT: Tunggu maklumat atau peluang yang lebih baik."
+            android:textColor="#00F0FF"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <!-- Item Advisor -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="ITEM ADVISOR"
+            android:textColor="#00F0FF"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRecommendedItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REC [HIGH]: Sea Halberd - Potong 50% Regen."
+            android:textColor="#FFFFFF"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tvAlternativeItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ALT: Dominance Ice - Sekat Attack Speed."
+            android:textColor="#CBD5E1"
+            android:textSize="10sp" />
+
+        <!-- AI Reasoning & Confidence -->
+        <TextView
+            android:id="@+id/tvAiReasoning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="AI REASONING: Menunggu analisis skrin."
+            android:textColor="#E2E8F0"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tvConfidence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="RISK: LOW  |  CONFIDENCE: MEDIUM"
+            android:textColor="#A78BFA"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- COMPACT MODE -->
+    <LinearLayout
+        android:id="@+id/layoutCompact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvCompactStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="8dp"
+            android:text="STARMAN [ROTATE]"
+            android:textColor="#00F0FF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnOverlayExpand"
+            android:layout_width="64dp"
+            android:layout_height="32dp"
+            android:text="OPEN"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</FrameLayout>
+
+<!-- ==========================================
+     FAIL: app/src/main/res/values/strings.xml
+     ========================================== -->
+<!--
+<resources>
+    <string name="app_name">STARMAN MLBB</string>
+</resources>
+-->
