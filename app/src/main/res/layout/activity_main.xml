@@ -1,98 +1,33 @@
-<!-- ==========================================
-     FAIL 1: app/src/main/res/layout/activity_main.xml
-     ========================================== -->
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#05070E"
-    android:padding="20dp">
+    android:gravity="center"
+    android:padding="16dp">
 
-    <LinearLayout
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STARMAN MLBB"
+        android:textColor="#00F0FF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Floating AI Coach - Sedia"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnStartOverlay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:text="START LIVE ANALYSIS"
+        android:layout_marginTop="24dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="STARMAN MLBB"
-            android:textColor="#00F0FF"
-            android:textSize="26sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="FLOATING AI COACH • CYBER EDITION"
-            android:textColor="#A78BFA"
-            android:textSize="13sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tvPermissionStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="#11182C"
-            android:padding="12dp"
-            android:text="STATUS OVERLAY: MENYEMAK..."
-            android:textColor="#FFFFFF"
-            android:textSize="13sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Pilih Role Anda Dalam Perlawanan:"
-            android:textColor="#CBD5E1"
-            android:textSize="13sp" />
-
-        <Spinner
-            android:id="@+id/spinnerUserRole"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="6dp"
-            android:background="#11182C" />
-
-        <Button
-            android:id="@+id/btnGrantOverlay"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:backgroundTint="#1E2B48"
-            android:text="1. BERI KEBENARAN OVERLAY (SYSTEM_ALERT_WINDOW)"
-            android:textColor="#00F0FF" />
-
-        <Button
-            android:id="@+id/btnStartOverlayOnly"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#8B5CF6"
-            android:text="2. LANCARKAN FLOATING OVERLAY (MOD SIMULASI / MVP)"
-            android:textColor="#FFFFFF" />
-
-        <Button
-            android:id="@+id/btnStartCaptureAndOverlay"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#00F0FF"
-            android:text="3. MULA LIVE SCREEN CAPTURE + FLOATING OVERLAY"
-            android:textColor="#05070E"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btnStopAllServices"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#F43F5E"
-            android:text="HENTIKAN SEMUA SERVIS STARMAN"
-            android:textColor="#FFFFFF" />
-
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>
