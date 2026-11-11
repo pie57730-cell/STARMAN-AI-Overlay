@@ -1,4 +1,4 @@
-name: build-apk
+name: build
 
 on:
   push:
@@ -21,13 +21,10 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
         with:
-          api-level: 34
-          build-tools: 34.0.0
-          ndk: 25.2.9519653
-          cmake: 3.22.1
-
-      - name: Accept licenses
-        run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
+          cmdline-tools-version: 12.0
+          accept-android-sdk-licenses: true
+          log-accepted-android-sdk-licenses: false
+          packages: 'platforms;android-34 build-tools;34.0.0 platform-tools'
 
       - name: Grant gradlew permission
         run: chmod +x gradlew
