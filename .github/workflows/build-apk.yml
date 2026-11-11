@@ -26,11 +26,11 @@ jobs:
           log-accepted-android-sdk-licenses: false
           packages: 'platforms;android-34 build-tools;34.0.0 platform-tools'
 
-      - name: Grant gradlew permission
-        run: chmod +x gradlew
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
 
       - name: Build APK
-        run: ./gradlew assembleDebug --stacktrace
+        run: gradle assembleDebug --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
